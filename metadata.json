@@ -1,0 +1,6 @@
+{
+  "name": "Hành Trình Khám Phá Dân Số Việt Nam",
+  "description": "Ứng dụng học tập và thử thách bản đồ 3D tương tác về địa lí dân số Việt Nam dành cho học sinh THPT.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

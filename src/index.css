@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+@layer utilities {
+  /* Screen shake keyframes for explosion effect */
+  @keyframes screenShake {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    10% { transform: translate(-8px, -6px) rotate(-1.5deg); }
+    20% { transform: translate(8px, 6px) rotate(1.5deg); }
+    30% { transform: translate(-7px, 5px) rotate(-1deg); }
+    40% { transform: translate(7px, -5px) rotate(1deg); }
+    50% { transform: translate(-5px, -3px) rotate(-0.5deg); }
+    60% { transform: translate(5px, 3px) rotate(0.5deg); }
+    70% { transform: translate(-3px, 2px) rotate(0deg); }
+    80% { transform: translate(3px, -2px) rotate(0deg); }
+    90% { transform: translate(-1px, 1px) rotate(0deg); }
+    100% { transform: translate(0, 0) rotate(0deg); }
+  }
+
+  /* Explosion shockwave ripple */
+  @keyframes shockwave {
+    0% {
+      transform: scale(0.2);
+      opacity: 0.9;
+    }
+    50% {
+      opacity: 0.7;
+    }
+    100% {
+      transform: scale(3.5);
+      opacity: 0;
+    }
+  }
+
+  /* Clapping hands float animation */
+  @keyframes clapFloat {
+    0% {
+      transform: translateY(20px) scale(0.7);
+      opacity: 0;
+    }
+    20% {
+      transform: translateY(0px) scale(1.2);
+      opacity: 1;
+    }
+    40% {
+      transform: translateY(-8px) scale(1.05);
+    }
+    60% {
+      transform: translateY(-4px) scale(1.15);
+    }
+    80% {
+      transform: translateY(-2px) scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-25px) scale(0.9);
+      opacity: 0;
+    }
+  }
+
+  /* Red flash boom backdrop */
+  @keyframes boomFlash {
+    0% {
+      background-color: rgba(239, 68, 68, 0.45);
+    }
+    100% {
+      background-color: rgba(239, 68, 68, 0);
+    }
+  }
+
+  .animate-screen-shake {
+    animation: screenShake 0.65s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  }
+
+  .animate-shockwave {
+    animation: shockwave 0.8s cubic-bezier(0.1, 0.8, 0.3, 1) forwards;
+  }
+
+  .animate-clap-float {
+    animation: clapFloat 1.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  .animate-boom-flash {
+    animation: boomFlash 0.7s ease-out forwards;
+  }
+}
